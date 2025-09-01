@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <<p id="output">output text</p>
+  <<button id="op">Click me</button>
+  <button id="op2"></button>
+  <script>
+    let btn=document.querySelector("#op")
+    btn.addEventListener('click',add(20,11))
+    btn2.addEventListener('dblclick',add(30,20))
+    function add(x,y){
+      console.log(parseInt(x)+ parseInt(y))
+    }
+    
+    
+    //Output in html
+    let btn2=document.querySelector("#op2")
+    let output=document.querySelector("#output")
+    btn2.addEventlistenee('click',()=>{
+      output.innerText="Hey there"
+    })
+  </script>
+</body>
+</html>
