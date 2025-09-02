@@ -1,30 +1,131 @@
 <!DOCTYPE html>
-<html lang="en
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <<p id="output">output text</p>
-  <<button id="op">Click me</button>
-  <button id="op2"></button>
-  <script>
-    let btn=document.querySelector("#op")
-    btn.addEventListener('click',add(20,11))
-    btn2.addEventListener('dblclick',add(30,20))
-    function add(x,y){
-      console.log(parseInt(x)+ parseInt(y))
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ollasse - Nigerian & African Cuisine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom yellow theme shades */
+    :root {
+      --yellow-light: #fff9db;
+      --yellow-primary: #facc15;
+      --yellow-dark: #b45309;
     }
-    
-    
-    //Output in html
-    let btn2=document.querySelector("#op2")
-    let output=document.querySelector("#output")
-    btn2.addEventlistenee('click',()=>{
-      output.innerText="Hey there"
-    })
-  </script>
+  </style>
+</head>
+<body class="bg-yellow-50 text-yellow-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-yellow-400 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-extrabold tracking-wide">Ollasse</h1>
+      <nav class="space-x-6 font-semibold">
+        <a href="#branches" class="hover:text-yellow-700 transition">Branches</a>
+        <a href="#speciality" class="hover:text-yellow-700 transition">Speciality</a>
+        <a href="#jobs" class="hover:text-yellow-700 transition">Job Opportunities</a>
+        <a href="#contact" class="hover:text-yellow-700 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-yellow-100 py-16 px-6 text-center max-w-4xl mx-auto">
+    <h2 class="text-4xl font-extrabold mb-4">Authentic Nigerian & African Dishes</h2>
+    <p class="text-yellow-800 text-lg max-w-xl mx-auto mb-8">
+      Ollasse offers a unique culinary experience with traditional Nigerian and African dishes crafted with passion. Visit any of our three branches across Nigeria and taste the richness of our culture.
+    </p>
+    <a href="#speciality" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 px-8 rounded shadow transition">
+      Explore Our Menu
+    </a>
+  </section>
+
+  <!-- Branches Section -->
+  <section id="branches" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-3xl font-bold mb-8 border-b-4 border-yellow-400 inline-block pb-2">Our Branches in Nigeria</h3>
+    <div class="grid md:grid-cols-3 gap-8 text-yellow-900">
+      <div class="bg-yellow-100 rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Lagos Branch</h4>
+        <p>Located in the heart of Lagos, serving the bustling city with fresh and authentic dishes.</p>
+        <p class="mt-3 font-semibold">Address: 12 Marina Road, Lagos</p>
+      </div>
+      <div class="bg-yellow-100 rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Abuja Branch</h4>
+        <p>Our Abuja branch offers a cozy atmosphere perfect for family and business meals.</p>
+        <p class="mt-3 font-semibold">Address: 45 Central Business District, Abuja</p>
+      </div>
+      <div class="bg-yellow-100 rounded-lg p-6 shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Port Harcourt Branch</h4>
+        <p>Serving the vibrant city of Port Harcourt with our signature dishes and warm hospitality.</p>
+        <p class="mt-3 font-semibold">Address: 78 Garden Avenue, Port Harcourt</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speciality Section -->
+  <section id="speciality" class="bg-yellow-200 py-12 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-3xl font-bold mb-8 border-b-4 border-yellow-500 inline-block pb-2">Our Unique Speciality</h3>
+      <p class="mb-8 text-yellow-900 max-w-3xl">
+        Ollasse specializes in authentic Nigerian and African dishes prepared with traditional recipes and fresh ingredients. From spicy jollof rice to rich egusi soup, our menu celebrates the diverse flavors of the continent.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6 text-yellow-900">
+        <div class="bg-yellow-100 rounded-lg p-5 shadow hover:shadow-lg transition">
+          <h4 class="font-semibold text-xl mb-2">Jollof Rice</h4>
+          <p>Spicy, flavorful rice cooked with tomatoes, peppers, and a blend of spices.</p>
+          <p class="mt-3 font-bold">Price: ₦2,500</p>
+        </div>
+        <div class="bg-yellow-100 rounded-lg p-5 shadow hover:shadow-lg transition">
+          <h4 class="font-semibold text-xl mb-2">Egusi Soup</h4>
+          <p>Rich melon seed soup served with pounded yam or fufu.</p>
+          <p class="mt-3 font-bold">Price: ₦3,000</p>
+        </div>
+        <div class="bg-yellow-100 rounded-lg p-5 shadow hover:shadow-lg transition">
+          <h4 class="font-semibold text-xl mb-2">Suya</h4>
+          <p>Grilled spicy meat skewers, a popular street food favorite.</p>
+          <p class="mt-3 font-bold">Price: ₦1,800</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Opportunities Section -->
+  <section id="jobs" class="max-w-5xl mx-auto px-6 py-12">
+    <h3 class="text-3xl font-bold mb-8 border-b-4 border-yellow-400 inline-block pb-2">Join Our Team</h3>
+    <p class="mb-6 text-yellow-900 max-w-3xl">
+      Ollasse is growing! We are looking for passionate individuals to fill the following positions across our branches:
+    </p>
+    <ul class="list-disc list-inside space-y-3 text-yellow-900 font-semibold max-w-md">
+      <li>Chief Executive Officer (CEO)</li>
+      <li>Driver</li>
+      <li>Delivery Person</li>
+      <li>Chef (Specializing in Nigerian & African cuisine)</li>
+    </ul>
+    <p class="mt-8 text-yellow-900 max-w-3xl">
+      Interested candidates can send their CV and cover letter to <a href="mailto:careers@ollasse.ng" class="underline hover:text-yellow-600">careers@ollasse.ng</a>.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-yellow-100 py-12 px-6">
+    <div class="max-w-4xl mx-auto text-yellow-900 text-center">
+      <h3 class="text-3xl font-bold mb-6 border-b-4 border-yellow-400 inline-block pb-2">Contact Us</h3>
+      <p class="mb-4">For inquiries, reservations, or feedback, reach out to us:</p>
+      <p class="font-semibold">Phone: +234 800 123 4567</p>
+      <p class="font-semibold">Email: <a href="mailto:info@ollasse.ng" class="underline hover:text-yellow-600">info@ollasse.ng</a></p>
+      <p class="mt-6 italic">Follow us on social media for updates and special offers!</p>
+      <div class="mt-4 flex justify-center space-x-6 text-yellow-700">
+        <a href="#" aria-label="Facebook" class="hover:text-yellow-900 transition">Facebook</a>
+        <a href="#" aria-label="Twitter" class="hover:text-yellow-900 transition">Twitter</a>
+        <a href="#" aria-label="Instagram" class="hover:text-yellow-900 transition">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-400 text-yellow-900 py-6 text-center font-semibold">
+    &copy; 2024 Ollasse. All rights reserved.
+  </footer>
+
 </body>
 </html>
